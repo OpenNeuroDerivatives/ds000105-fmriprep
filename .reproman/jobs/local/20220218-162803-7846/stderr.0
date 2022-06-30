@@ -1,1 +1,27 @@
-../../../../.git/annex/objects/1q/2K/MD5E-s1700--d43660e75b4bf4b97e8d763351212440.0/MD5E-s1700--d43660e75b4bf4b97e8d763351212440.0
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.8/site-packages/fmriprep/cli/run.py", line 114, in main
+    fmriprep_wf.run(**config.nipype.get_plugin())
+  File "/opt/conda/lib/python3.8/site-packages/nipype/pipeline/engine/workflows.py", line 638, in run
+    runner.run(execgraph, updatehash=updatehash, config=self.config)
+  File "/opt/conda/lib/python3.8/site-packages/nipype/pipeline/plugins/base.py", line 192, in run
+    report_nodes_not_run(notrun)
+  File "/opt/conda/lib/python3.8/site-packages/nipype/pipeline/plugins/tools.py", line 96, in report_nodes_not_run
+    raise RuntimeError(
+RuntimeError: Workflow did not execute cleanly. Check log for details
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/conda/bin/fmriprep", line 8, in <module>
+    sys.exit(main())
+  File "/opt/conda/lib/python3.8/site-packages/fmriprep/cli/run.py", line 185, in main
+    write_bidsignore(config.execution.fmriprep_dir)
+  File "/opt/conda/lib/python3.8/site-packages/fmriprep/utils/bids.py", line 41, in write_bidsignore
+    ignore_file.write_text("\n".join(bids_ignore) + "\n")
+  File "/opt/conda/lib/python3.8/pathlib.py", line 1255, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors) as f:
+  File "/opt/conda/lib/python3.8/pathlib.py", line 1222, in open
+    return io.open(self, mode, buffering, encoding, errors, newline,
+  File "/opt/conda/lib/python3.8/pathlib.py", line 1078, in _opener
+    return self._accessor.open(self, flags, mode)
+PermissionError: [Errno 13] Permission denied: '/scratch1/03201/jbwexler/openneuro_derivatives/derivatives/fmriprep/ds000105-fmriprep/.bidsignore'

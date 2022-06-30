@@ -1,1 +1,7 @@
-../../../../.git/annex/objects/m5/ww/MD5E-s340--09ecee0f80614a5a6b0559b1af4a1298/MD5E-s340--09ecee0f80614a5a6b0559b1af4a1298
+WARNING (02/10/22 19:11:51): LAUNCHER_WORKDIR variable not set. Using current directory.
+using /tmp/launcher.4039424.hostlist.NeN6PBap to get hosts
+starting job on c209-004
+starting job on c211-033
+slurmstepd: error: *** JOB 4039424 ON c209-004 CANCELLED AT 2022-02-11T01:58:09 ***
+Connection to c211-033 closed by remote host.
+Terminated
