@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/opt/conda/bin/fmriprep", line 8, in <module>
+    sys.exit(main())
+  File "/opt/conda/lib/python3.8/site-packages/fmriprep/cli/run.py", line 182, in main
+    write_derivative_description(
+  File "/opt/conda/lib/python3.8/site-packages/fmriprep/utils/bids.py", line 90, in write_derivative_description
+    Path.write_text(deriv_dir / 'dataset_description.json', json.dumps(desc, indent=4))
+  File "/opt/conda/lib/python3.8/pathlib.py", line 1255, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors) as f:
+  File "/opt/conda/lib/python3.8/pathlib.py", line 1222, in open
+    return io.open(self, mode, buffering, encoding, errors, newline,
+  File "/opt/conda/lib/python3.8/pathlib.py", line 1078, in _opener
+    return self._accessor.open(self, flags, mode)
+PermissionError: [Errno 13] Permission denied: '/scratch1/03201/jbwexler/openneuro_derivatives/derivatives/fmriprep/ds000105-fmriprep/dataset_description.json'
